@@ -1,0 +1,51 @@
+@use "sass:math";
+@use "variables" as var;
+
+@function px-to-rem($px) {
+	$rems: math.div($px, var.$root-font-size) * 1rem;
+
+	@return $rems;
+}
+
+// Плавное изменение значение в зависимости от ширины экрана.
+@function fluid(
+	$min-size,
+	$max-size,
+	$min-breakpoint: var.$default-size-start,
+	$max-breakpoint: var.$default-size-end,
+	$unit: vw
+) {
+	$slope: math.div($max-size - $min-size, $max-breakpoint - $min-breakpoint);
+	$slope-to-unit: $slope * 100;
+	$intercept-rem: px-to-rem($min-size - $slope * $min-breakpoint);
+	$min-size-rem: px-to-rem($min-size);
+	$max-size-rem: px-to-rem($max-size);
+
+	@return clamp(
+		#{$min-size-rem},
+		#{$slope-to-unit}#{$unit} + #{$intercept-rem},
+		#{$max-size-rem}
+	);
+}
+
+// Плавное изменение значение в зависимости от ширины экрана.
+// Работает в обратную сторону. Увеличивает значение при уменьшении ширины.
+@function fluid-reverse(
+	$min-size,
+	$max-size,
+	$min-breakpoint,
+	$max-breakpoint,
+	$unit: vw
+) {
+	$slope: math.div($max-size - $min-size, $max-breakpoint - $min-breakpoint);
+	$slope-to-unit: $slope * 100;
+	$intercept-rem: px-to-rem($min-size - $slope * $min-breakpoint);
+	$min-size-rem: px-to-rem($min-size);
+	$max-size-rem: px-to-rem($max-size);
+
+	@return clamp(
+		#{$max-size-rem},
+		#{$slope-to-unit}#{$unit} + #{$intercept-rem},
+		#{$min-size-rem}
+	);
+}

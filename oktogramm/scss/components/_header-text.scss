@@ -1,0 +1,14 @@
+@use "../abstracts/mixins" as *;
+
+.header-text {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+
+	&__top {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+}

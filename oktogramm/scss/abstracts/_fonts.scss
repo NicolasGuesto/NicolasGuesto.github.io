@@ -1,0 +1,106 @@
+@use "functions" as *;
+@import "https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;8..144,500&display=swap";
+
+h1 {
+	font-family: "Roboto Flex", sans-serif;
+	font-weight: 500;
+	font-size: #{fluid(36px, 54px)};
+	line-height: 100%;
+	text-decoration: none;
+	letter-spacing: -0.4px;
+}
+
+h2 {
+	font-family: "Roboto Flex", sans-serif;
+	font-weight: 500;
+	font-size: #{fluid(24px, 36px)};
+	line-height: 100%;
+	text-decoration: none;
+	letter-spacing: -0.4px;
+}
+
+h3 {
+	font-family: "Roboto Flex", sans-serif;
+	font-weight: 500;
+	font-size: #{fluid(20px, 24px)};
+	line-height: 120%;
+	text-decoration: none;
+	letter-spacing: -0.4px;
+}
+
+h4 {
+	font-family: "Roboto Flex", sans-serif;
+	font-weight: 500;
+	font-size: #{fluid(18px, 20px)};
+	line-height: 110%;
+	text-decoration: none;
+	letter-spacing: -0.4px;
+}
+
+.body-1 {
+	font-family: "Roboto Flex", sans-serif;
+	font-weight: 500;
+	font-size: #{fluid(16px, 18px)};
+	line-height: 140%;
+	text-decoration: none;
+	letter-spacing: -0.4px;
+}
+
+.body-2 {
+	font-family: "Roboto Flex", sans-serif;
+	font-weight: 400;
+	font-size: #{fluid(14px, 16px)};
+	line-height: 150%;
+	text-decoration: none;
+	letter-spacing: normal;
+}
+
+.headline-1 {
+	font-family: "Roboto Flex", sans-serif;
+	font-weight: 400;
+	font-size: #{fluid(14px, 16px)};
+	line-height: 100%;
+	text-decoration: none;
+	letter-spacing: normal;
+}
+
+.headline-2 {
+	font-family: "Roboto Flex", sans-serif;
+	font-weight: 400;
+	font-size: #{fluid(12px, 14px)};
+	line-height: 100%;
+	text-decoration: none;
+	letter-spacing: normal;
+}
+
+.subtitle-medium {
+	font-family: "Roboto Flex", sans-serif;
+	font-weight: 500;
+	font-size: #{fluid(14px, 16px)};
+	line-height: 130%;
+	text-decoration: none;
+	letter-spacing: normal;
+}
+
+.subtitle-light {
+	font-family: "Roboto Flex", sans-serif;
+	font-weight: 400;
+	font-size: #{fluid(14px, 16px)};
+	line-height: 100%;
+	text-decoration: none;
+	letter-spacing: normal;
+}
+
+.hairline-1 {
+	font-family: "Roboto Flex", sans-serif;
+	font-weight: 400;
+	font-size: 17px;
+	font-size: #{fluid(14px, 17px)};
+	line-height: 100%;
+	text-decoration: none;
+	letter-spacing: normal;
+}
+
+.bold {
+	font-weight: 500;
+}

@@ -1,0 +1,14 @@
+@use "../abstracts/colors" as *;
+
+body {
+	background-color: $background-black;
+}
+
+a {
+	cursor: pointer;
+}
+
+.hidden {
+	opacity: 0;
+	visibility: hidden;
+}

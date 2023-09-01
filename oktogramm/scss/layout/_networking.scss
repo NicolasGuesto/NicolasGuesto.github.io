@@ -1,0 +1,99 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/functions" as *;
+
+.networking {
+	padding-bottom: #{fluid(40px, 80px)};
+
+	&__header-container {
+		padding: #{fluid(40px, 64px)} 0;
+		background-color: $background-dark-grey;
+	}
+
+	&__header {
+		@include container(1144px);
+	}
+
+	&__container {
+		@include container(1144px);
+
+		padding-top: #{fluid(32px, 64px)};
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: #{fluid(32px, 64px)};
+	}
+
+	&__description {
+		display: flex;
+		flex-direction: column;
+		gap: #{fluid(4px, 8px)};
+
+		& br {
+			@media (width <= 640px) {
+				display: none;
+			}
+		}
+	}
+
+	&__comparison {
+		display: flex;
+		flex-direction: column;
+		gap: #{fluid(4px, 16px)};
+	}
+
+	&__images-row {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: #{fluid(4px, 16px)};
+	}
+
+	&__images-column {
+		display: flex;
+		flex-direction: column;
+		gap: #{fluid(4px, 16px)};
+
+		p {
+			white-space: nowrap;
+			font-size: #{fluid(8px, 16px, 320px, 1144px)};
+		}
+	}
+
+	&__image {
+		height: #{fluid(133px, 477px, 320px, 1144px)};
+		border-radius: #{fluid(12px, 24px, 320px, 1144px)};
+		border: 1px solid $border-black;
+		background-position: center center;
+		background-size: contain;
+		background-repeat: no-repeat;
+
+		&--society {
+			background-image: url("~/src/assets/images/networking/networking-community.png");
+		}
+
+		&--oktogramm {
+			background-image: url("~/src/assets/images/networking/networking-community-oktogramm.png");
+		}
+	}
+
+	&__advantages-row {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: #{fluid(4px, 16px)};
+
+		@media (width <= 700px) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__advantage {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		border-radius: #{fluid(12px, 16px, 320px, 1144px)};
+		border: 1px solid $border-black;
+		padding: #{fluid(16px, 20px)};
+	}
+}

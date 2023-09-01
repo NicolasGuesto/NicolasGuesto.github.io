@@ -1,0 +1,24 @@
+$adaptive-1200: 1200px;
+$adaptive-992: 992px;
+$adaptive-768: 768px;
+$adaptive-600: 600px;
+
+.text-mobile-disabled {
+	&--992 {
+		@media (width <= 992px) {
+			display: none;
+		}
+	}
+
+	&--768 {
+		@media (width <= 768px) {
+			display: none;
+		}
+	}
+
+	&--600 {
+		@media (width <= 600px) {
+			display: none;
+		}
+	}
+}
